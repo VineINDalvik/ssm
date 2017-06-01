@@ -27,11 +27,6 @@ public class BookController {
 	@Autowired
 	private BookService bookService;
 
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
-	private String index(Model model) {
-		return "index";// WEB-INF/jsp/"list".jsp
-	}
-
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	private String list(Model model) {
 		List<Book> list = bookService.getList();
